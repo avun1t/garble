@@ -65,11 +65,11 @@ var (
 
 func init() {
 	flagSet.Usage = usage
-	flagSet.BoolVar(&flagLiterals, "literals", false, "Obfuscate literals such as strings")
-	flagSet.BoolVar(&flagTiny, "tiny", false, "Optimize for binary size, losing some ability to reverse the process")
+	flagSet.BoolVar(&flagLiterals, "literals", true, "Obfuscate literals such as strings")
+	flagSet.BoolVar(&flagTiny, "tiny", true, "Optimize for binary size, losing some ability to reverse the process")
 	flagSet.BoolVar(&flagDebug, "debug", false, "Print debug logs to stderr")
 	flagSet.StringVar(&flagDebugDir, "debugdir", "", "Write the obfuscated source to a directory, e.g. -debugdir=out")
-	flagSet.Var(&flagSeed, "seed", "Provide a base64-encoded seed, e.g. -seed=o9WDTZ4CN4w\nFor a random seed, provide -seed=random")
+	flagSet.Var(&flagSeed, "seed","random", "Provide a base64-encoded seed, e.g. -seed=o9WDTZ4CN4w\nFor a random seed, provide -seed=random")
 }
 
 var rxGarbleFlag = regexp.MustCompile(`-(?:literals|tiny|debug|debugdir|seed)(?:$|=)`)
