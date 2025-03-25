@@ -45,10 +45,10 @@ import (
 	"golang.org/x/mod/module"
 	"golang.org/x/tools/go/ast/astutil"
 	"golang.org/x/tools/go/ssa"
-	"mvdan.cc/garble/internal/ctrlflow"
+	"github.com/avun1t/garble/internal/ctrlflow"
 
-	"mvdan.cc/garble/internal/linker"
-	"mvdan.cc/garble/internal/literals"
+	"github.com/avun1t/garble/internal/linker"
+	"github.com/avun1t/garble/internal/literals"
 )
 
 var flagSet = flag.NewFlagSet("garble", flag.ExitOnError)
@@ -69,7 +69,7 @@ func init() {
 	flagSet.BoolVar(&flagTiny, "tiny", true, "Optimize for binary size, losing some ability to reverse the process")
 	flagSet.BoolVar(&flagDebug, "debug", false, "Print debug logs to stderr")
 	flagSet.StringVar(&flagDebugDir, "debugdir", "", "Write the obfuscated source to a directory, e.g. -debugdir=out")
-	flagSet.Var(&flagSeed, "seed","random", "Provide a base64-encoded seed, e.g. -seed=o9WDTZ4CN4w\nFor a random seed, provide -seed=random")
+	flagSet.Var(&flagSeed, "seed", "Provide a base64-encoded seed, e.g. -seed=o9WDTZ4CN4w\nFor a random seed, provide -seed=random")
 }
 
 var rxGarbleFlag = regexp.MustCompile(`-(?:literals|tiny|debug|debugdir|seed)(?:$|=)`)
@@ -327,7 +327,7 @@ func goVersionOK() bool {
 	if version.Compare(builtVersion, sharedCache.GoVersion) < 0 {
 		fmt.Fprintf(os.Stderr, `
 garble was built with %q and can't be used with the newer %q; rebuild it with a command like:
-    go install mvdan.cc/garble@latest
+    go install github.com/avun1t/garble@latest
 `[1:], builtVersionFull, toolchainVersionFull)
 		return false
 	}

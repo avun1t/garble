@@ -8,8 +8,8 @@ import (
 	"strconv"
 
 	"golang.org/x/tools/go/ssa"
-	ah "mvdan.cc/garble/internal/asthelper"
-	"mvdan.cc/garble/internal/literals"
+	ah "github.com/avun1t/garble/internal/asthelper"
+	"github.com/avun1t/garble/internal/literals"
 )
 
 var hardeningMap = map[string]dispatcherHardening{

@@ -91,7 +91,7 @@ stderr 'directory not found'
 # and to be able to use static VCS info, use an environment variable.
 # First, test without the information, and then with it.
 exec garble version
-stdout -count=1 'mvdan.cc/garble \(devel\)'
+stdout -count=1 'github.com/avun1t/garble \(devel\)'
 stdout -count=1 'Build settings'
 stdout -count=3 '-compiler|GOOS|GOARCH'
 ! stdout 'vcs'

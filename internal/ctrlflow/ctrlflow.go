@@ -14,8 +14,8 @@ import (
 
 	"golang.org/x/tools/go/ast/astutil"
 	"golang.org/x/tools/go/ssa"
-	ah "mvdan.cc/garble/internal/asthelper"
-	"mvdan.cc/garble/internal/ssa2ast"
+	ah "github.com/avun1t/garble/internal/asthelper"
+	"github.com/avun1t/garble/internal/ssa2ast"
 )
 
 const (

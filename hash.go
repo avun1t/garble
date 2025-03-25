@@ -16,7 +16,7 @@ import (
 	"strconv"
 	"strings"
 
-	"mvdan.cc/garble/internal/literals"
+	"github.com/avun1t/garble/internal/literals"
 )
 
 const buildIDSeparator = "/"

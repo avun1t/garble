@@ -1,6 +1,6 @@
 # garble
 
-	go install mvdan.cc/garble@latest
+	go install github.com/avun1t/garble@latest
 
 Obfuscate Go code by wrapping the Go toolchain. Requires Go 1.23.5 or later.
 
@@ -11,7 +11,7 @@ The tool also supports `garble test` to run tests with obfuscated code,
 and `garble reverse` to de-obfuscate text such as stack traces.
 Run `garble -h` to see all available commands and flags.
 
-You can also use `go install mvdan.cc/garble@master` to install the latest development version.
+You can also use `go install github.com/avun1t/garble@master` to install the latest development version.
 
 ### Purpose
 

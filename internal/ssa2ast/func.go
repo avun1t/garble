@@ -13,7 +13,7 @@ import (
 	"strings"
 
 	"golang.org/x/tools/go/ssa"
-	ah "mvdan.cc/garble/internal/asthelper"
+	ah "github.com/avun1t/garble/internal/asthelper"
 )
 
 var (

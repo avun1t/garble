@@ -1,4 +1,4 @@
-module mvdan.cc/garble
+module github.com/avun1t/garble
 
 // Before the .5 bugfix release, alias tracking via go/types
 // was broken; see https://go.dev/issue/70517.
@@ -11,6 +11,7 @@ require (
 	github.com/rogpeppe/go-internal v1.14.1
 	golang.org/x/mod v0.24.0
 	golang.org/x/tools v0.31.0
+	github.com/avun1t/garble v0.14.1
 )
 
 require (
